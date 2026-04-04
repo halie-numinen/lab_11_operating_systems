@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 int main () {
-    void GetSystemInfo(LPSYSTEM_INFO lpSystemInfo);
-    SIZE_T VirtualQuery(LPCVOID lpAddress, PMEMORY_BASIC_INFORMATION
-    lpBuffer, SIZE_T dwLength);
+    SYSTEM_INFO si;
+    GetSystemInfo(&si);
+    printf("Page size: %lu\n", si.dwPageSize);
     
     return 0;
 }
